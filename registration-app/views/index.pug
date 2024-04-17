@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+  if registrations.length
+    table.table.table-bordered.table-striped.mt-5
+      thead.table-dark
+        tr
+         th Name
+         th Email
+         th Notes
+      tbody
+      each registration in registrations
+        tr
+          td= registration.name
+          td= registration.email
+          td= registration.notes
+  else
+    p No registrations yet :(
